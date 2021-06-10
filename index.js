@@ -9,7 +9,6 @@ function init(){
    document.querySelector("#maiorNota").addEventListener("click", maiorNota);
    document.querySelector("#media").addEventListener("click", media);
    document.querySelector("#aprovados").addEventListener("click", aprovados);
-   //document.getElementById("salvar")
 }
 
 function salvarAluno(){
@@ -22,12 +21,6 @@ function salvarAluno(){
       "nome": nome,
       "nota": nota
    };
-
-   // let aluno2 = new Aluno(nome, nota);
-
-   // let aluno3 = {};
-   // aluno3.nome = nome;
-   // aluno3.nota = nota;
 
    //Inserir no array
    alunos[alunos.length] = aluno;
@@ -90,18 +83,9 @@ function aprovados(){//maior ou igual a 6
       aluno = alunos[i];
       if(aluno.nota >= 6.0){
          console.log(`Nome: ${aluno.nome} - Nota: ${aluno.nota}`);
-         //Equivalente a:
-         //console.log("Nome: " + aluno.nome + " - Nota: " + aluno.nota)
       }
    }
 }
-
-
-
-
-
-
-
 
 
 class Aluno{
@@ -109,5 +93,4 @@ class Aluno{
       this.nome = nome;
       this.nota = nota;
    };
-   
 }
